@@ -1,7 +1,7 @@
 fun main() {
     val obj = EnumEg()
 
-    val str = obj.getCreditCard(CreditCard.GOLD)
+    val str = obj.getCreditCard(CreditCard.DIAMOND)
     println(str)
 
     val color = obj.getCreditCardColor(CreditCardColor.DIAMOND)
@@ -49,9 +49,9 @@ enum class CreditCardLimit:ICreditCardLimit {
 class EnumEg {
     fun getCreditCard(card: CreditCard):String {
         return when(card) {
-            CreditCard.SILVER -> "Silver Credit ${CreditCard.SILVER.name} and ordinal is ${CreditCard.SILVER.ordinal}"
-            CreditCard.GOLD -> "Gold Credit Card ${CreditCard.GOLD.name} and ordinal is ${CreditCard.GOLD.ordinal}"
-            CreditCard.DIAMOND -> "Diamond Credit Card ${CreditCard.DIAMOND.name} and ordinal is ${CreditCard.DIAMOND.ordinal}"
+            CreditCard.SILVER -> "Card Type: ${CreditCard.SILVER.name} and ordinal is: ${CreditCard.SILVER.ordinal}"
+            CreditCard.GOLD -> "Card Type: ${CreditCard.GOLD.name} and ordinal is ${CreditCard.GOLD.ordinal}"
+            CreditCard.DIAMOND -> "Card Type: ${CreditCard.DIAMOND.name} and ordinal is ${CreditCard.DIAMOND.ordinal}"
         }
     }
 
