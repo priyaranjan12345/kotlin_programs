@@ -21,4 +21,6 @@ fun main() {
         println("Name: ${student.studentName} and RollNo: ${student.studentRollNo}")
     }
 
+    val result = students.filter { it.studentName.startsWith("R") }
+    println(result)
 }
